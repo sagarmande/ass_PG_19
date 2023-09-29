@@ -1,0 +1,72 @@
+
+
+**Question 1:**
+```python
+def double_char(s):
+    result = ''
+    for char in s:
+        result += char * 2
+    return result
+
+# Test cases
+print(double_char("String"))  # Output: "SSttrriinngg"
+print(double_char("Hello World!"))  # Output: "HHeelllloo WWoorrlldd!!"
+print(double_char("1234!_ "))  # Output: "11223344!!__ "
+```
+
+**Question 2:**
+```python
+def reverse(val):
+    if isinstance(val, bool):
+        return not val
+    else:
+        return "boolean expected"
+
+# Test cases
+print(reverse(True))  # Output: False
+print(reverse(False))  # Output: True
+print(reverse(0))  # Output: "boolean expected"
+print(reverse(None))  # Output: "boolean expected"
+```
+
+**Question 3:**
+```python
+def num_layers(n):
+    thickness_mm = 0.5
+    for _ in range(n):
+        thickness_mm *= 2
+    thickness_m = thickness_mm / 1000  # Convert mm to meters
+    return f"{thickness_m:.3f}m"
+
+# Test cases
+print(num_layers(1))  # Output: "0.001m"
+print(num_layers(4))  # Output: "0.008m"
+print(num_layers(21))  # Output: "1048.576m"
+```
+
+**Question 4:**
+```python
+def index_of_caps(s):
+    indices = [i for i, char in enumerate(s) if char.isupper()]
+    return indices
+
+# Test cases
+print(index_of_caps("eDaBiT"))  # Output: [1, 3, 5]
+print(index_of_caps("eQuINoX"))  # Output: [1, 3, 4, 6]
+print(index_of_caps("determine"))  # Output: []
+print(index_of_caps("STRIKE"))  # Output: [0, 1, 2, 3, 4, 5]
+print(index_of_caps("sUn"))  # Output: [1]
+```
+
+**Question 5:**
+```python
+def find_even_nums(n):
+    even_nums = [i for i in range(2, n + 1, 2)]
+    return even_nums
+
+# Test cases
+print(find_even_nums(8))  # Output: [2, 4, 6, 8]
+print(find_even_nums(4))  # Output: [2, 4]
+print(find_even_nums(2))  # Output: [2]
+```
+
